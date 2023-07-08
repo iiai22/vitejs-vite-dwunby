@@ -114,11 +114,11 @@ a {
 .prof {
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .email {
-  position: absolute;
-  transform: translate(5%, 70%);
+  margin-left: 5px;
   font-weight: 600;
   font-size: 23px;
   color: #f9b17a;
@@ -133,13 +133,13 @@ a {
   text-shadow: 0 0 5px #f9b17a;
 }
 
-.img {
+.avatar {
   position: absolute;
   right: 0;
   overflow: hidden;
   z-index: 9;
 }
-img {
+.avatarImg {
   width: 300px;
   cursor: move;
   z-index: 10;
@@ -172,17 +172,41 @@ img {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-.box {
-  width: 25%;
-  min-width: 25%;
+.link {
+  width: 90%;
   height: 50%;
-  background-color: #f9b17a;
+  background-color: #111725;
+  cursor: default;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow-y: hidden;
+}
+.siteImg {
+  top: 0;
+  position: relative;
+  width: 100%;
+  height: 60%;
+  transition: top 0.3s;
 }
 
+.siteImg:hover {
+  top: 10vh;
+}
+.siteDesc {
+  width: 100%;
+  display: flex;
+  margin-left: 1.5rem;
+  flex-direction: column;
+  position: relative;
+  top: 2rem;
+}
+.desc {
+  color: rgba(255, 255, 255, 0.7);
+}
 /*----------Scroll----------*/
 
 ::-webkit-scrollbar {
@@ -278,5 +302,13 @@ body {
 @media (min-width: 1200px) {
   html {
     font-size: 150%;
+  }
+  .siteImg {
+    width: 90%;
+    height: 80%;
+    transform: translate(5%);
+  }
+  .siteImg:hover {
+    top: 5vh;
   }
 }

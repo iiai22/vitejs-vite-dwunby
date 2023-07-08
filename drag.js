@@ -1,5 +1,5 @@
 // Make the DIV element draggable:
-dragElement(document.getElementById('img'));
+dragElement(document.getElementById('avatar'));
 
 function dragElement(elmnt) {
   var pos1 = 0,
@@ -71,8 +71,14 @@ function dragElement(elmnt) {
       var currentX = startX + distanceX * easeProgress;
       var currentY = startY + distanceY * easeProgress;
       // restrict the element to stay within the window boundaries
-      currentX = Math.max(0, Math.min(currentX, window.innerWidth - element.offsetWidth));
-      currentY = Math.max(0, Math.min(currentY, window.innerHeight - element.offsetHeight));
+      currentX = Math.max(
+        0,
+        Math.min(currentX, window.innerWidth - element.offsetWidth)
+      );
+      currentY = Math.max(
+        0,
+        Math.min(currentY, window.innerHeight - element.offsetHeight)
+      );
       element.style.left = currentX + 'px';
       element.style.top = currentY + 'px';
 
